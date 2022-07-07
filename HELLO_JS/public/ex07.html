@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.it {
+	width: 80px;
+}
+</style>
+<script>
+//keyCheck(event)로 써도 똑같이 실행
+function keyCheck(e) {
+// 	console.log(e);
+	
+// 	if (e.keyCode == 13){
+// 		myClick();
+// 	}
+	
+	if (e.key == "Enter") {
+		myClick();
+	}
+	
+// 	if (e.code == 'Enter') {
+// 		myClick();
+// 	}
+}
+
+function myClick() {
+	let mine = document.getElementById('itMine').value;
+	let com = "";
+	let result = "";
+	
+	let rnd = Math.floor(Math.random()*3+1);
+	
+// 	console.log(rnd);
+	
+	if(rnd == 1){
+		com = "가위";
+	} else if(rnd == 2) {
+		com = "바위";
+	} else {
+		com = "보";
+	}
+	
+	if(com == mine) {
+		result = "비김";
+	} else if((com == "가위" && mine == "바위")
+			||(com == "바위" && mine == "보")
+			||(com == "보" && mine == "가위")){
+		result = "내가 이김^^"
+	} else {
+		result = "내가 짐ㅠㅠ"
+	}
+	
+	document.getElementById('itCom').value = com;
+	document.getElementById('itResult').value = result;
+}
+</script>
+</head>
+<body>
+<pre>
+ex 07 : 가위바위보 게임
+</pre>
+
+<table border="1">
+	<tr>
+		<td>나</td>
+		<td><input type="text" class="it" id="itMine" onkeydown="keyCheck(event)"/></td>
+	</tr>
+	
+	<tr>
+		<td>COM</td>
+		<td><input type="text" class="it" id="itCom" /></td>
+	</tr>
+	
+	<tr>
+		<td>result</td>
+		<td><input type="text" class="it" id="itResult" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><input type="button" value="게임하기" style="width: 100%" onclick="myClick()"/></td>
+	</tr>
+	
+</table>
+
+</body>
+</html>

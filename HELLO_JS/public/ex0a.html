@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+input[type=text] {
+	width: 30px;
+}
+</style>
+<script>
+function myClick(){
+	let a = document.getElementById('it_a').value;
+	let b = document.getElementById('it_b').value;
+	let c = document.getElementById('it_c').value;
+	
+	let aa = parseInt(a);
+	let bb = parseInt(b);
+	let cc = parseInt(c);
+	
+	let sum = 0;
+	
+	for(i = aa; i<=bb; i++) {
+		if(i%cc == 0){
+			sum += i;
+		}
+	}
+	
+// 	console.log(sum);
+	
+	document.getElementById('it_d').value = sum;
+}
+</script>
+</head>
+<body>
+<pre>
+ ex : 지정한 범위 내의 배수의 합
+</pre>
+
+<input type="text" id="it_a" />에서
+<input type="text" id="it_b" />까지
+<input type="text" id="it_c" />
+<input type="button" value="배수의 합은" onclick="myClick()"/>
+<input type="text" id="it_d" />
+</body>
+</html>

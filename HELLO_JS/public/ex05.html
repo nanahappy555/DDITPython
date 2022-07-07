@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.it {
+	width: 30px;
+}
+</style>
+<script>
+function myClick() {
+	let mine = document.querySelector('#it_mine').value;
+	let com = "";
+	let result = "";
+	
+	let rnd = Math.random();
+	
+	if(rnd>0.5){
+		com = "홀";
+	} else {
+		com = "짝";
+	}
+	
+// 	console.log(com.equals(mine)); 안되나??
+	console.log(com==mine);
+	
+	if(com==mine) {
+		result = "이김";
+	} else {
+		result = "짐";
+	}
+	
+	document.querySelector('#it_com').value = com;
+	document.querySelector('#it_result').value = result;
+}
+</script>
+</head>
+<body>
+<!-- <body onload="myClick()">  -->
+<!-- window.onload와 같은 기능. 페이지가 로딩된 후 함수 호출
+실행순서가 body onload -> window.onload라서 window.onload는 안 먹음  -->
+<pre>
+ex 05 : 홀짝게임
+</pre>
+
+<table border="1">
+	<tr>
+		<td>나</td>
+		<td><input type="text" class="it" id="it_mine" /></td>
+	</tr>
+	
+	<tr>
+		<td>COM</td>
+		<td><input type="text" class="it" id="it_com" /></td>
+	</tr>
+	
+	<tr>
+		<td>result</td>
+		<td><input type="text" class="it" id="it_result" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><input type="button" value="게임하기" style="width: 100%" onclick="myClick()"/></td>
+	</tr>
+	
+</table>
+
+</body>
+</html>

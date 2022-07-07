@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.btn {
+	width: 100%;
+}
+
+#it {
+	text-align: right;
+}
+</style>
+<script>
+//샘 풀이가 더 간단... "충격"
+//다 똑같은 함수 onclick="sem(event)" 넣어주면 끝
+function sem(e){
+// 	console.log(e.target.value); //e.target=클릭한 버튼
+	let str_new = e.target.value;
+	let str_old = document.querySelector('#it').value; //이미 입력된 텍스트
+	document.querySelector('#it').value = str_old + str_new;
+}
+
+let txt = "";
+
+function btnClick(val){
+	
+	switch(val){
+	case '1':
+		txt += "1";
+		break;
+	case '2':
+		txt += "2";
+		break;
+	case '3':
+		txt += "3";
+		break;
+	case '4':
+		txt += "4";
+		break;
+	case '5':
+		txt += "5";
+		break;
+	case '6':
+		txt += "6";
+		break;
+	case '7':
+		txt += "7";
+		break;
+	case '8':
+		txt += "8";
+		break;
+	case '9':
+		txt += "9";
+		break;
+	case '0':
+		txt += "0";
+		break;
+	}
+	document.getElementById('it').value = txt;
+	
+}
+function myCall(){
+	let callNum = document.getElementById('it').value;
+	alert(callNum + "\ncalling...");
+	
+}
+</script>
+</head>
+<body>
+<pre>
+	ex 09 : 전화기
+</pre>
+
+<table border="1">
+	<tr>
+		<td colspan="3"><input type="text" id="it" style="width:100px"/></td>
+	</tr>
+	
+	<tr>
+		<td><input type="button" class="btn" value="1" onclick="btnClick('1')"/></td>
+		<td><input type="button" class="btn" value="2" onclick="btnClick('2')"/></td>
+		<td><input type="button" class="btn" value="3" onclick="btnClick('3')"/></td>
+	</tr>
+	
+	<tr>
+		<td><input type="button" class="btn" value="4" onclick="btnClick('4')"/></td>
+		<td><input type="button" class="btn" value="5" onclick="btnClick('5')"/></td>
+		<td><input type="button" class="btn" value="6" onclick="btnClick('6')"/></td>
+	</tr>
+	
+	<tr>
+		<td><input type="button" class="btn" value="7" onclick="btnClick('7')"/></td>
+		<td><input type="button" class="btn" value="8" onclick="btnClick('8')"/></td>
+		<td><input type="button" class="btn" value="9" onclick="btnClick('9')"/></td>
+	</tr>
+	
+	<tr>
+		<td><input type="button" class="btn" value="0" onclick="btnClick('0')"/></td>
+		<td colspan="2"><input type="button" class="btn" value="call" onclick="myCall()"" /></td>
+	</tr>
+</table>
+</body>
+</html>

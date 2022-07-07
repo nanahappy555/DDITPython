@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function myclick(){
+	let objDan = document.getElementById('it');
+// 	console.log(objDan.value);
+	let dan = parseInt(objDan.value);
+	
+	let result = "*** " + dan + "단 ***<br>";
+	
+	for(var i = 1; i<10; i++){
+		result += `${dan} * ${i} = ${dan * i}<br>`;
+	}
+	
+	document.getElementById('mytd').innerHTML = result;
+}
+</script>
+</head>
+<body>
+<pre>
+	ex 04 : 구구단 출력
+</pre>
+
+<table border = "1px">
+	<tr>
+		<td>출력단수</td>
+		<td><input type="text" id="it" style="width: 30px"/></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><input type="button" onclick="myclick()" value="출력하기" style="width: 100%"/></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2" id="mytd" style="height: 200px">&nbsp;</td>
+	</tr>
+</table>
+</body>
+</html>

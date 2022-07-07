@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function decrease() {
+	let tVal = document.querySelector('#it').value;
+	tt = parseInt(tVal);
+	tt--;
+	document.querySelector('#it').value = tt;
+	
+	//sem
+// 	let tVal = document.querySelector('#it');
+// 	tt = parseInt(tVal.value);
+// 	tt--;
+// 	tVal.value = tt;
+}
+</script>
+</head>
+<body>
+<input type="text" id="it" value="500" />
+<input type="button" value="decrease" onclick="decrease()"/>
+</body>
+</html>

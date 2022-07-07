@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+.it{
+	width: 20px;
+}
+</style>
+<script>
+function myClick() {
+// 	let objs = document.querySelectorAll('.it');
+// 	let a = parseInt(objs[0].value);
+// 	let b = parseInt(objs[1].value);
+// 	let c = parseInt(objs[2].value);
+//	let sum = a + b;
+//	objs[2].vaule = sum;
+		
+	let a = document.getElementsByClassName('it')[0];
+	let b = document.getElementsByClassName('it')[1];
+// 	console.log(a.value);
+// 	console.log(b.value);
+	let aa = parseInt(a.value);
+	let bb = parseInt(b.value);
+	
+	let result = aa + bb;
+	
+	document.getElementsByClassName('it')[2].value = result;
+}
+</script>
+</head>
+<body>
+<input type="text" class="it" > 
++
+<input type="text" class="it" >
+<input type="button" value="=" onclick="myClick()">
+<input type="text" class="it" >
+</body>
+</html>
