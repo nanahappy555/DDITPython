@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+function fn_add() {
+	location.href = "emp_add";	
+}
+</script>
 </head>
 <body>
 
@@ -21,6 +26,11 @@
 		<td>{{e.addr}}</td>
 	</tr>
 {% endfor %}
+	<tr>
+		<td colspan=4>
+			<input type="button" value="추가" onclick="fn_add()"/>
+		</td>
+	</tr>
 </table>
 
 
