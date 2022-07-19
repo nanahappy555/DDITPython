@@ -1,6 +1,6 @@
 import pymysql
 
-class DaoStockOld:
+class DaoStockSynk:
     def __init__(self):
         self.conn = pymysql.connect(host='localhost', user='root', password='python',port=3305,
                        db='_stock_old', charset='utf8')
@@ -40,7 +40,7 @@ class DaoStockOld:
         
 if __name__ == '__main__':
     ret=[]
-    dso = DaoStockOld()
+    dso = DaoStockSynk()
     s_code = dso.selectAllNames()[0]
     print("s_code",s_code)
     list = dso.selects(s_code)

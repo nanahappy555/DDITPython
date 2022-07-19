@@ -21,11 +21,6 @@ for i in arr_name:
 
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1, projection='3d')
-# ax.plot(arrx, arry, arrz[0]) 
-# ax.plot(arrx+1, arry, arrz[1])
-# ax.plot(arrx+2, arry, arrz[2]) 
-# ax.plot(arrx+3, arry, arrz[3])
-# ax.plot(arrx+4, arry, arrz[5])
 
 for idx,arr in enumerate(arrz):
     arr_n = np.array(arr)
